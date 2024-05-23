@@ -526,6 +526,11 @@ CONFIG_ARCH_EXYNOS9=y
 # CONFIG_ANDROID_SYSTEM_AS_ROOT is not set
 
 #
+# Custom DT nodes
+#
+CONFIG_EUREKA_CUSTOM_DT_NODES=y
+
+#
 # Bus support
 #
 # CONFIG_PCI is not set
