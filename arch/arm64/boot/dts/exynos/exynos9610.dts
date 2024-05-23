@@ -3329,15 +3329,15 @@
 		g3d_genpd_name = "pd-g3d"; /*KC, RM: pd-g3d, LT,MK: pd-embedded_g3d*/
         #cooling-cells = <2>; /* min followed by max */
 		governor = "interactive";
-		interactive_info = <764000 65 0>;
+		interactive_info = <1001000 75 0>;
 		gpu_dvfs_table_size = <11 7>; /*<row col>*/
 		/*  8 columns      freq  down   up  stay  mif    little  middle   big  */
-		gpu_dvfs_table = <  1053000    95  100   1  2093000 1638000       0
-		                     949000    56   90   1  2093000 1638000       0
-		                     839000    58   90   1  2093000 1638000       0
-		                     764000    58   90   5  1794000 1534000       0
-		                     683000    53   70   4  1539000 1456000       0
-		                     572000    50   70   3  1352000 1456000       0
+		gpu_dvfs_table = <   1300000   95  100   1  2093000 1638000       0
+		                     1200000   56   90   1  2093000 1638000       0
+		                     1100000   58   90   1  2093000 1638000       0
+		                     1001000   58   90   5  1794000 1534000       0
+		                     839000    53   70   4  1539000 1456000       0
+		                     764000    50   70   3  1352000 1456000       0
 		                     546000    50   70   3  1014000 1456000       0
 		                     455000    54   70   3   845000  910000       0
 		                     385000    56   70   3   546000  806000       0
@@ -3347,8 +3347,8 @@
 		gpu_pmqos_cpu_cluster_num = <2>;
 		gpu_pmu_status_reg_offset = <0x4064>;
 		gpu_pmu_status_local_pwr_mask = <0xF>; /*0x1 << 0*/
-		gpu_max_clock = <1053000>;
-		gpu_max_clock_limit = <1053000>;
+		gpu_max_clock = <1300000>;
+		gpu_max_clock_limit = <1300000>;
 		gpu_min_clock = <260000>;
 		gpu_dvfs_start_clock = <260000>;
 		gpu_dvfs_bl_config_clock = <260000>;
@@ -3357,7 +3357,7 @@
 		gpu_voltage_offset_margin = <37500>;
 		gpu_tmu_control = <1>;
 		gpu_temp_throttling_level_num = <6>;
-		gpu_temp_throttling = <764000 572000 455000 338000 260000 260000>;
+		gpu_temp_throttling = <839000 764000 546000 455000 385000 260000>;
 		gpu_power_coeff = <625>;
 		gpu_dvfs_time_interval = <5>; /*1 tick : 10ms*/
 		gpu_default_wakeup_lock = <1>;
@@ -3384,6 +3384,10 @@
 		gpu_asv_cali_lock_val = <0>; /*Should check this value when MALI_ASV_CALIBRATION_SUPPORT is enabled*/
 		gpu_set_pmu_duration_reg = <0>; /* only for KC for now*/
 		gpu_set_pmu_duration_val = <0>; /* only for KC for now*/
+                eureka_gpu_max_clock = <1300000>;
+		eureka_gpu_highspeed_clock = <1001000>;
+		eureka_gpu_highspeed_load = <75>;
+		eureka_gpu_temp_throttling = <1200000 1100000 1001000 845000 676000 343000>;
 	 };
 
 	reboot {
